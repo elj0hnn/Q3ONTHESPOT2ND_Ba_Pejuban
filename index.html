@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of Triangle</title>
+</head>
+<body>
+    <script>
+        var s1=prompt("Input first number:");
+        var s2=prompt("Input second number:");
+        var s3=prompt("Input third number:");
+
+        let result1=isNaN(s1)
+        let result2=isNaN(s2)
+        let result3=isNaN(s3)
+
+        if(result1==true||result2==true||result3==true){
+            window.alert("You have entered a non-number");
+        }
+        else{
+            window.alert(triangle(s1,s2,s3));
+        }
+
+        function triangle(s1,s2,s3){
+            if(s1==s2 && s2==s3){
+                return("Equilateral Triangle");
+            }
+            else if(s1==s2 || s2==s3 || s3==s1){
+                return("Isosceles Triangle");
+            }
+            else{
+                return("Scalene Triangle");
+            }
+        }
+    </script>
+</body>
+</html>
